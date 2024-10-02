@@ -1,0 +1,29 @@
+h1 {
+  text-align: center;
+}
+
+body {
+  width: 50%;
+  margin: auto;
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+#submit {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 5px;
+}

@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>DOM Manipulation</title>
+    <link href="./index.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <h1>Login Form</h1>
+    <p>Please Enter Your Login Credentials</p>
+    <form id="loginForm" name="myForm">
+      <input
+        type="text"
+        name="email"
+        placeholder="Email"
+        pattern="/^[a-zA-Z]@~.com/"
+      />
+      <input type="password" name="password" placeholder="Password" />
+      <p
+        id="#showHidePassword"
+        style="cursor: pointer"
+        onclick="handleHideAndShow()"
+      >
+        Show
+      </p>
+      <button id="submit" type="submit">Submit</button>
+    </form>
+    <script>
+      // Password show and hidden propoperty
+      function handleHideAndShow() {
+        const attribute =
+          document.forms["myForm"]["password"].getAttribute("type");
+        console.log(attribute);
+        if (attribute === "password") {
+          document.forms["myForm"]["password"].type = "text";
+        } else {
+          document.forms["myForm"]["password"].type = "password";
+        }
+      }
+    </script>
+  </body>
+</html>
